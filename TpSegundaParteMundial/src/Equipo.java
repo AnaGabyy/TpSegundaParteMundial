@@ -25,4 +25,7 @@ public class Equipo {
         this.partidosJugados = partidosJugados;
     }
 
+    public void addPartidosJugados(Partido partidosJugados){
+        this.partidosJugados.add(partidosJugados);
+    }
 }
