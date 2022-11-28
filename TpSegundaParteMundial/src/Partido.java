@@ -16,6 +16,12 @@ public class Partido {
         this.resultado = resultado;
     }
 
+    public Partido (Date fecha,Equipo local,Equipo visitante){
+        this.fecha = fecha;
+        this.local = local;
+        this.visitante = visitante;
+    }
+
     //getters y setters
     public Date getFecha() {
         return fecha;
@@ -48,7 +54,6 @@ public class Partido {
     public void setResultado(Resultado resultado) {
         this.resultado = resultado;
     }
-
 
 
 }
