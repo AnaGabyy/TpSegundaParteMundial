@@ -17,9 +17,7 @@ public class Partido {
     }
 
     public Partido (Date fecha,Equipo local,Equipo visitante){
-        this.fecha = fecha;
-        this.local = local;
-        this.visitante = visitante;
+
     }
 
     //getters y setters
