@@ -7,12 +7,10 @@ public abstract class EtapaMundial {
     private ArrayList<Partido>partidos;
     private ArrayList<Equipo>equiposQueAvanzan;
 
-    public EtapaMundial(String descripcionEtapa) {
+    public EtapaMundial(String descripcionEtapa, ArrayList<Partido> partidos) {
         this.descripcionEtapa = descripcionEtapa;
         this.partidos = partidos;
-        this.equiposQueAvanzan = equiposQueAvanzan;
     }
-
 
     //Getters y setters
     public String getDescripcionEtapa() {
@@ -44,5 +42,6 @@ public abstract class EtapaMundial {
     public void addEquiposQueAvanzan(Equipo equiposQueAvanzan){
         this.equiposQueAvanzan.add(equiposQueAvanzan);
     }
+
 
 }
