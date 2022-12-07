@@ -35,4 +35,12 @@ public class Llave extends EtapaMundial{
     public void addEquiposQueAvanzan(Equipo equiposQueAvanzan){
         this.equiposQueAvanzan.add(equiposQueAvanzan);
     }
+
+    @Override
+    public String toString() {
+        return "Llave{" +
+                "llaves=" + llaves +
+                ", equiposQueAvanzan=" + equiposQueAvanzan +
+                '}';
+    }
 }
