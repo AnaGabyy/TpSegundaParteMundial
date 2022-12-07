@@ -55,13 +55,21 @@ public class Partido {
         this.resultado = resultado;
     }
 
+    public String marcador(){
+        return String.format("%s (%d) - (%d) %s",
+                getLocal().getNombre(),
+                getResultado().getGolesLocal(),
+                getResultado().getGolesVisitante(),
+                getVisitante().getNombre()
+        );
+    }
+
     @Override
     public String toString() {
         return "Partido{" +
                 "fecha=" + fecha +
                 ", local=" + local.getNombre() +
                 ", visitante=" + visitante.getNombre() +
-
                 '}';
     }
 }
