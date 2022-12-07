@@ -1,15 +1,13 @@
-import Mundial.Equipo;
-import Mundial.Grupo;
-import Mundial.Partido;
-import Mundial.Resultado;
+import Mundial.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Inicio del mundial 2022");
+        System.out.println("-------------------------\nInicio del mundial 2022\n-------------------------");
 
         //Equipos
         Equipo paisesBajos = new Equipo("Paises Bajos");
@@ -52,16 +50,10 @@ public class Main {
         Equipo uruguay = new Equipo("Uruguay");
         Equipo ghana = new Equipo("Ghana");
 
-        //GRUPO
+        //GRUPO A
         Grupo grupoA = new Grupo("Fase de grupos", new ArrayList<Partido>(0));
         //Agregacion de equipos al grupo
         grupoA.setEquipoGrupo(catar); grupoA.setEquipoGrupo(ecuador); grupoA.setEquipoGrupo(senegal); grupoA.setEquipoGrupo(paisesBajos);
-
-        //Nombre de equipos que conforman el grupo A
-        System.out.println("Grupo A conformado por: \n");
-        for (Equipo equipos: grupoA.getEquipoDelGrupo()){
-            System.out.println(equipos.getNombre());
-        }
 
         //Partidos grupo A
         grupoA.addPartido(new Partido(new Date(2022,10,02), catar, ecuador, new Resultado(0,1)));
@@ -70,6 +62,12 @@ public class Main {
         grupoA.addPartido(new Partido(new Date(2022,10,05), paisesBajos, ecuador, new Resultado(1,1)));
         grupoA.addPartido(new Partido(new Date(2022,10,06), ecuador, senegal, new Resultado(1,2)));
         grupoA.addPartido(new Partido(new Date(2022,10,07), paisesBajos, catar, new Resultado(2,0)));
+
+        //Nombre de equipos que conforman el grupo A
+        System.out.println("\nResultados del Grupo A:\n");
+        for (Partido partidos: grupoA.getPartidos()){
+            System.out.println(partidos.marcador());
+        }
 
         for (Partido partidos : grupoA.getPartidos()) {
 
@@ -80,16 +78,20 @@ public class Main {
                 partidos.getLocal().setPuntaje(1);
                 partidos.getVisitante().setPuntaje(1);
             }
-            else
+            else{
                 partidos.getVisitante().setPuntaje(3);
-        }
+            }
 
-        //Prueba de puntajes
-        System.out.println("----------------------------------------");
-        System.out.println(catar.getNombre() + " Tiene: " + catar.getPuntaje());
-        System.out.println(ecuador.getNombre() + " Tiene: " + ecuador.getPuntaje());
-        System.out.println(senegal.getNombre() + " Tiene: " + senegal.getPuntaje());
-        System.out.println(paisesBajos.getNombre() + " Tiene: " + paisesBajos.getPuntaje());
+            Collections.sort(grupoA.getEquipoDelGrupo(),new ComparatorEquipo());
+            Collections.reverse(grupoA.getEquipoDelGrupo());
+        }
+        System.out.println("------------------");
+
+
+        System.out.println("Puntuaciones del Grupo A:\n");
+        for (Equipo equipos: grupoA.getEquipoDelGrupo()){
+            System.out.println(equipos.getNombre() + ": " + equipos.getPuntaje() + " puntos");
+        }
 
 
         Grupo grupoB = new Grupo("Fase de grupos", new ArrayList<Partido>(0));
@@ -102,7 +104,7 @@ public class Main {
         grupoB.addPartido(new Partido(new Date(2022,10,13), gales, inglaterra, new Resultado(0,3)));
 
 
-        
+
         System.out.println("------fin------");
 
 
