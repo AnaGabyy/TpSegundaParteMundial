@@ -9,6 +9,9 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Inicio del mundial 2022");
+
+        //Equipos
         Equipo paisesBajos = new Equipo("Paises Bajos");
         Equipo senegal = new Equipo("Senegal");
         Equipo ecuador = new Equipo("Ecuador");
@@ -49,8 +52,7 @@ public class Main {
         Equipo uruguay = new Equipo("Uruguay");
         Equipo ghana = new Equipo("Ghana");
 
-
-
+        //GRUPO
         Grupo grupoA = new Grupo("Fase de grupos", new ArrayList<Partido>(0));
         //Agregacion de equipos al grupo
         grupoA.setEquipoGrupo(catar); grupoA.setEquipoGrupo(ecuador); grupoA.setEquipoGrupo(senegal); grupoA.setEquipoGrupo(paisesBajos);
@@ -69,19 +71,20 @@ public class Main {
         grupoA.addPartido(new Partido(new Date(2022,10,06), ecuador, senegal, new Resultado(1,2)));
         grupoA.addPartido(new Partido(new Date(2022,10,07), paisesBajos, catar, new Resultado(2,0)));
 
-        for (Partido ejemplo: grupoA.getPartidos()) {
+        for (Partido partidos : grupoA.getPartidos()) {
 
-            if(ejemplo.getResultado().ganoLocal())
-                ejemplo.getLocal().setPuntaje(3);
-            else if (ejemplo.getResultado().empate())
+            if(partidos.getResultado().ganoLocal())
+                partidos.getLocal().setPuntaje(3);
+            else if (partidos.getResultado().empate())
             {
-                ejemplo.getLocal().setPuntaje(1);
-                ejemplo.getVisitante().setPuntaje(1);
+                partidos.getLocal().setPuntaje(1);
+                partidos.getVisitante().setPuntaje(1);
             }
             else
-                ejemplo.getVisitante().setPuntaje(3);
+                partidos.getVisitante().setPuntaje(3);
         }
 
+        //Prueba de puntajes
         System.out.println("----------------------------------------");
         System.out.println(catar.getNombre() + " Tiene: " + catar.getPuntaje());
         System.out.println(ecuador.getNombre() + " Tiene: " + ecuador.getPuntaje());
@@ -89,10 +92,7 @@ public class Main {
         System.out.println(paisesBajos.getNombre() + " Tiene: " + paisesBajos.getPuntaje());
 
 
-
-
         Grupo grupoB = new Grupo("Fase de grupos", new ArrayList<Partido>(0));
-
         //Setear los equipos en los grupos
         grupoB.addPartido(new Partido(new Date(2022,10,8), inglaterra, iran, new Resultado(6,2)));
         grupoB.addPartido(new Partido(new Date(2022,10,9), usa, gales, new Resultado(1,1)));
@@ -101,10 +101,8 @@ public class Main {
         grupoB.addPartido(new Partido(new Date(2022,10,12), iran, usa, new Resultado(0,1)));
         grupoB.addPartido(new Partido(new Date(2022,10,13), gales, inglaterra, new Resultado(0,3)));
 
-        //grupoB.getEquiposQueAvanzan();
 
-
-
+        
         System.out.println("------fin------");
 
 
