@@ -7,8 +7,8 @@ public class Llave extends EtapaMundial{
     private ArrayList<Partido>llaves;
     private ArrayList<Equipo>equiposQueAvanzan;
 
-    public Llave(String descripcionEtapa) {
-        super(descripcionEtapa);
+    public Llave(String descripcionEtapa, ArrayList<Partido> partidos, ArrayList<Partido> llaves) {
+        super(descripcionEtapa, partidos);
         this.llaves = llaves;
         this.equiposQueAvanzan = equiposQueAvanzan;
     }
@@ -23,20 +23,6 @@ public class Llave extends EtapaMundial{
 
     @Override
     public ArrayList<Equipo> getEquiposQueAvanzan() {
-        for (int i = 0; i < getPartidos().size(); i++) {
-            if (getPartidos().get(i).getResultado().ganoLocal()){
-
-                equiposQueAvanzan.add(getPartidos().get(i).getLocal());
-
-            } else if (getPartidos().get(i).getResultado().empate()) {
-                equiposQueAvanzan.add(getPartidos().get(i).getLocal());
-
-            } else {
-                equiposQueAvanzan.add(getPartidos().get(i).getVisitante());
-
-            }
-        }
-
         return equiposQueAvanzan;
     }
 
