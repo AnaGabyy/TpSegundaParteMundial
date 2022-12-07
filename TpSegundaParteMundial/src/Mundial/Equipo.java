@@ -46,4 +46,13 @@ public class Equipo {
     private int sumaPuntaje(int x){
         return this.puntaje + x;
     }
+
+    @Override
+    public String toString() {
+        return "Equipo{" +
+                "nombre='" + nombre + '\'' +
+                ", puntaje=" + puntaje +
+                ", partidosJugados=" + partidosJugados +
+                '}';
+    }
 }
