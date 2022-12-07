@@ -41,5 +41,11 @@ public class Grupo extends EtapaMundial{
         this.equiposQueAvanzan.add(equiposQueAvanzan);
     }
 
-
+    @Override
+    public String toString() {
+        return "Grupo{" +
+                "equiposDelGrupo=" + equiposDelGrupo +
+                ", equiposQueAvanzan=" + equiposQueAvanzan +
+                '}';
+    }
 }
