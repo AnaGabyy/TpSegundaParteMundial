@@ -18,7 +18,7 @@ public class Partido {
         this.resultado = resultado;
     }
 
-    public Partido (Date fecha,Equipo local,Equipo visitante){
+    public Partido (Date fecha, Equipo local, Equipo visitante){
 
     }
 
@@ -55,5 +55,13 @@ public class Partido {
         this.resultado = resultado;
     }
 
+    @Override
+    public String toString() {
+        return "Partido{" +
+                "fecha=" + fecha +
+                ", local=" + local.getNombre() +
+                ", visitante=" + visitante.getNombre() +
 
+                '}';
+    }
 }
