@@ -1,7 +1,8 @@
 package Mundial;
 
 import java.util.ArrayList;
-public class Equipo {
+
+public class Equipo{
 
     private String nombre;
     private int puntaje;
@@ -55,4 +56,5 @@ public class Equipo {
                 ", partidosJugados=" + partidosJugados +
                 '}';
     }
+
 }
