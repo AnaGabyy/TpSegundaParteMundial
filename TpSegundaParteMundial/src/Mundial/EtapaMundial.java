@@ -2,10 +2,10 @@ package Mundial;
 
 import java.util.ArrayList;
 
-public class EtapaMundial {
+public abstract class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido>partidos;
-    private ArrayList<Equipo>equiposQueAvanzan;
+    private ArrayList<Equipo>equiposQueAvanzan = new ArrayList<>();
 
     public EtapaMundial(String descripcionEtapa, ArrayList<Partido> partidos) {
         this.descripcionEtapa = descripcionEtapa;
@@ -41,9 +41,7 @@ public class EtapaMundial {
         this.partidos.add(partido);
     }
 
-    public void addEquiposQueAvanzan(Equipo equiposQueAvanzan){
-        this.equiposQueAvanzan.add(equiposQueAvanzan);
-    }
+    public abstract void addEquiposQueAvanzan(Equipo equiposQueAvanzan);
 
     @Override
     public String toString() {
