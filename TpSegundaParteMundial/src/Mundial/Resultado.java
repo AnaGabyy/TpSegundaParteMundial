@@ -1,13 +1,12 @@
 package Mundial;
-
 public class Resultado {
 
     private int golesLocal;
     private int golesVisitante;
 
-    public Resultado(int golesLocal, int golesVisitante) {
-        this.golesLocal = golesLocal;
-        this.golesVisitante = golesVisitante;
+    public Resultado() {
+        this.golesLocal = (int)(Math.random()*7);
+        this.golesVisitante = (int)(Math.random()*7);
     }
 
     public int getGolesLocal() {
@@ -15,7 +14,7 @@ public class Resultado {
     }
 
     public void setGolesLocal(int golesLocal) {
-        this.golesLocal = golesLocal;
+        this.golesLocal = (int)(Math.random()*7);
     }
 
     public int getGolesVisitante() {
@@ -23,7 +22,7 @@ public class Resultado {
     }
 
     public void setGolesVisitante(int golesVisitante) {
-        this.golesVisitante = golesVisitante;
+        this.golesVisitante = (int)(Math.random()*7);
     }
 
     public boolean ganoLocal() {
@@ -32,7 +31,6 @@ public class Resultado {
         } else {
             return false;
         }
-
     }
 
     public boolean empate() {
@@ -41,7 +39,6 @@ public class Resultado {
         } else {
             return false;
         }
-
     }
 
     @Override

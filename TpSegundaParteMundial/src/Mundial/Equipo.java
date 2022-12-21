@@ -37,7 +37,6 @@ public class Equipo{
 
     public void setPuntaje(int x){
        this.puntaje = sumaPuntaje(x);
-
     }
 
     public int getPuntaje(){

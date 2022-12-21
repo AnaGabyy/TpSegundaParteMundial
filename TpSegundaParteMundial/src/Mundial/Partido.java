@@ -9,8 +9,6 @@ public class Partido {
     private Equipo visitante;
     private Resultado resultado;
 
-
-    //constructor
     public Partido(Date fecha, Equipo local, Equipo visitante, Resultado resultado) {
         this.fecha = fecha;
         this.local = local;
