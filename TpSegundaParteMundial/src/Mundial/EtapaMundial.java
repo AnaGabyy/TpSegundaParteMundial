@@ -2,7 +2,7 @@ package Mundial;
 
 import java.util.ArrayList;
 
-public abstract class EtapaMundial {
+public class EtapaMundial {
     private String descripcionEtapa;
     private ArrayList<Partido>partidos;
     private ArrayList<Equipo>equiposQueAvanzan = new ArrayList<>();
@@ -12,7 +12,6 @@ public abstract class EtapaMundial {
         this.partidos = partidos;
     }
 
-    //Getters y setters
     public String getDescripcionEtapa() {
         return descripcionEtapa;
     }
@@ -41,7 +40,9 @@ public abstract class EtapaMundial {
         this.partidos.add(partido);
     }
 
-    public abstract void addEquiposQueAvanzan(Equipo equiposQueAvanzan);
+    public void addEquiposQueAvanzan(Equipo equiposQueAvanzan) {
+        this.getEquiposQueAvanzan().add(equiposQueAvanzan);
+    }
 
     @Override
     public String toString() {
