@@ -19,12 +19,9 @@ class Mundial.EtapaMundial {
 }
 class Mundial.Grupo {
 - ArrayList<Equipo> equiposDelGrupo
-- ArrayList<Equipo> equiposQueAvanzan
 + <<Create>> Grupo(String,ArrayList<Partido>)
 + void setEquipoGrupo(Equipo)
 + ArrayList<Equipo> getEquipoDelGrupo()
-+ ArrayList<Equipo> getEquiposQueAvanzan()
-+ void setEquiposQueAvanzan(ArrayList<Equipo>)
 + void addEquiposQueAvanzan(Equipo)
 + String toString()
 }
@@ -48,15 +45,17 @@ class Mundial.Partido {
 }
 class Garaje.Vehiculos.Auto {
 - int cantidadPuertas
-+ <<Create>> Auto(int,String,String,String,int,int,int,int)
++ <<Create>> Auto(int,String,String,String,int,int,double,int)
 + int getCantidadPuertas()
 + void setCantidadPuertas(int)
++ String toString()
 }
 class Garaje.Vehiculos.Moto {
 - double cilindrada
 + <<Create>> Moto(int,String,String,String,int,int,int,double)
 + double getCilindrada()
 + void setCilindrada(double)
++ String toString()
 }
 class Mundial.ComparatorEquipo {
 + int compare(Equipo,Equipo)
@@ -68,8 +67,8 @@ class Garaje.Vehiculos.Vehiculo {
 - String modelo
 - int anio
 - int cantidadRuedas
-- int kilometraje
-+ <<Create>> Vehiculo(int,String,String,String,int,int,int)
+- double kilometraje
++ <<Create>> Vehiculo(int,String,String,String,int,int,double)
 + int getCodigoVehiculo()
 + void setCodigoVehiculo(int)
 + String getMatricula()
@@ -82,8 +81,9 @@ class Garaje.Vehiculos.Vehiculo {
 + void setAnio(int)
 + int getCantidadRuedas()
 + void setCantidadRuedas(int)
-+ int getKilometraje()
-+ void setKilometraje(int)
++ double getKilometraje()
++ void setKilometraje(double)
++ String toString()
 }
 class Garaje.SistemaGaraje.GarajeTest {
 + {static} void main(String[])
@@ -119,26 +119,23 @@ class Garaje.SistemaGaraje.Garaje {
 + void avisoLugarDisponible()
 + ArrayList<Vehiculo> getVehiculosRecibidos()
 + void setVehiculosRecibidos(ArrayList<Vehiculo>)
-+ void ingresarVehiculo(Vehiculo)
++ void addVehiculosRecibidos(Vehiculo)
 + void retirarVehiculo(Vehiculo)
 + int contarVehiculosRecibidos()
++ double precioTotalCambioRuedas()
++ double calcularKilometraje()
 + void cerrarGaraje()
++ String toString()
 }
 class Mundial.Llave {
-- ArrayList<Partido> llaves
-- ArrayList<Equipo> equiposQueAvanzan
-+ <<Create>> Llave(String,ArrayList<Partido>,ArrayList<Partido>)
-+ ArrayList<Partido> getLlaves()
-+ void setLlaves(ArrayList<Partido>)
-+ ArrayList<Equipo> getEquiposQueAvanzan()
-+ void setEquiposQueAvanzan(ArrayList<Equipo>)
++ <<Create>> Llave(String,ArrayList<Partido>)
 + void addEquiposQueAvanzan(Equipo)
 + String toString()
 }
 class Mundial.Resultado {
 - int golesLocal
 - int golesVisitante
-+ <<Create>> Resultado(int,int)
++ <<Create>> Resultado()
 + int getGolesLocal()
 + void setGolesLocal(int)
 + int getGolesVisitante()
