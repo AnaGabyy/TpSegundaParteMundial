@@ -424,7 +424,7 @@ public class Main {
         }
 
         System.out.println("\n--------------------------------------------------------");
-        System.out.println("           Equipos que pasan a la fase OCTAVOS:           ");
+        System.out.println("          Equipos que pasan a OCTAVOS DE FINAL:           ");
         System.out.println("--------------------------------------------------------\n");
 
         for (int i=0;i<clasificados.size();i++) {
@@ -552,6 +552,32 @@ public class Main {
         for (int i=0;i<laFinal.getEquiposQueAvanzan().size();i++) {
             System.out.println(laFinal.getEquiposQueAvanzan().get(i).getNombre());
         }
+
+        /*System.out.println("\n/------------------------------------------------------/");
+        System.out.println("/                  MÉTODOS TO STRING                   /");
+        System.out.println("/------------------------------------------------------/\n");
+
+        System.out.println("\nEquipo--------------------------------------------------\n");
+        System.out.println(argentina.toString());
+
+        System.out.println("\nGrupo---------------------------------------------------\n");
+        System.out.println(grupoA.toString());
+
+        System.out.println("\nArrayList Clasificados----------------------------------\n");
+        System.out.println(clasificados.toString());
+
+        System.out.println("\nOctavos-------------------------------------------------\n");
+        System.out.println(octavos.toString());
+
+        System.out.println("\nCuartos-------------------------------------------------\n");
+        System.out.println(cuartos.toString());
+
+        System.out.println("\nSemi final----------------------------------------------\n");
+        System.out.println(semifinal.toString());
+
+        System.out.println("\nFinal---------------------------------------------------\n");
+        System.out.println(laFinal.toString());*/
+
     }
 
 }
