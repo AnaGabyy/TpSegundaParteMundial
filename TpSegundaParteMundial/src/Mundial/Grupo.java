@@ -25,7 +25,7 @@ public class Grupo extends EtapaMundial{
 
     @Override
     public String toString() {
-        return super.toString() +"Grupo[" +
+        return super.toString() + "Grupo[" +
                 "equiposDelGrupo=" + equiposDelGrupo +
                 ']';
     }

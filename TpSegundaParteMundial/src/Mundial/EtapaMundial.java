@@ -45,10 +45,10 @@ public abstract class EtapaMundial {
 
     @Override
     public String toString() {
-        return "EtapaMundial{" +
+        return "EtapaMundial[" +
                 "descripcionEtapa='" + descripcionEtapa + '\'' +
                 ", partidos=" + partidos +
                 ", equiposQueAvanzan=" + equiposQueAvanzan +
-                '}';
+                ']';
     }
 }

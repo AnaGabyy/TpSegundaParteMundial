@@ -64,10 +64,11 @@ public class Partido {
 
     @Override
     public String toString() {
-        return "Partido{" +
+        return "Partido[" +
                 "fecha=" + fecha +
-                ", local=" + local.getNombre() +
-                ", visitante=" + visitante.getNombre() +
-                '}';
+                ", local=" + local +
+                ", visitante=" + visitante +
+                ", resultado=" + resultado +
+                ']';
     }
 }

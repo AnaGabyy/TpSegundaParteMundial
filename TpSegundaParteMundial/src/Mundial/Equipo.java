@@ -49,11 +49,10 @@ public class Equipo{
 
     @Override
     public String toString() {
-        return "Equipo{" +
+        return "Equipo[" +
                 "nombre='" + nombre + '\'' +
                 ", puntaje=" + puntaje +
                 ", partidosJugados=" + partidosJugados +
-                '}';
+                ']';
     }
-
 }
