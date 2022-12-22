@@ -8,9 +8,9 @@ public class Vehiculo {
     private String modelo;
     private int anio;
     private int cantidadRuedas;
-    private int kilometraje;
+    private double kilometraje;
 
-    public Vehiculo(int codigoVehiculo, String matricula, String marca, String modelo, int anio, int cantidadRuedas, int kilometraje) {
+    public Vehiculo(int codigoVehiculo, String matricula, String marca, String modelo, int anio, int cantidadRuedas, double kilometraje) {
         this.codigoVehiculo = codigoVehiculo;
         this.matricula = matricula;
         this.marca = marca;
@@ -68,19 +68,24 @@ public class Vehiculo {
         this.cantidadRuedas = cantidadRuedas;
     }
 
-    public int getKilometraje() {
+    public double getKilometraje() {
         return kilometraje;
     }
 
-    public void setKilometraje(int kilometraje) {
+    public void setKilometraje(double kilometraje) {
         this.kilometraje = kilometraje;
     }
 
-    //ArrayList<Vehiculo> vehiculosRecibidos;
-    /*public int calcularKilometraje(){
-        for (Vehiculo vehiculo : kilometraje) {
-
-        }
-    }*/
-
+    @Override
+    public String toString() {
+        return "Vehiculo[" +
+                "codigoVehiculo=" + codigoVehiculo +
+                ", matricula='" + matricula + '\'' +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", anio=" + anio +
+                ", cantidadRuedas=" + cantidadRuedas +
+                ", kilometraje=" + kilometraje +
+                ']';
+    }
 }
